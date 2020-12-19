@@ -1,0 +1,341 @@
+body{
+  
+    /*background: url(Görseller/arkaplan.jpeg) no-repeat fixed top;*/
+    background-position: fixed;
+    width: 100%;
+	height:100vh; /*windows hightı kaplasın diyorsun*/
+	margin:0 auto;
+	background-size:cover;/*ekranda boşluk kalmasın tarayıcının tamamını kaplasın*/
+}
+
+
+.navbar{
+    position: fixed;
+    
+    background-color: rgba(0, 0, 0, 0.7);
+    margin: 0;
+    padding: 0;
+
+}
+
+
+
+/*menunun uzerine gelindiginde alt cizgi belli olsun*/
+.nav-link::after{
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width 0.3s;
+}
+li{
+    display: inline-block;
+}
+.nav-link:hover::after{
+    width: 100%;
+    transition: width 0.3s;
+}
+
+/*yazi tipi ve fontu bicimlendirme*/
+.birinci ul li{
+    margin-left: 15px;
+
+}
+
+.birinci ul li a{
+    font-weight: 500;
+    font-size: 16px;
+    color: rgb(255, 255, 255) !important;
+    transition: 0.5s;
+    line-height: 45px;/*mobilde alt alta gelmemeleri icin*/
+}
+.birinci ul li a:hover{
+    color: white !important;
+}
+
+/*img bicimlendirme*/
+.birinci .navbar-brand img{
+    width: 350px;
+    height: 87.5px;
+}
+
+
+/*kucuk ekranlarda logo buyuk kaldi onun da kuculmesi icin*/
+@media screen and (max-width:800px){
+    .birinci .navbar-brand img{
+         width: 200px;
+         height: 50px;
+     }
+ 
+     .banner{
+         height: 70vh;
+     }
+ }
+
+.navbar-nav .navbar-item{
+    margin-top: 0;
+    padding-top: 0;
+}
+
+
+.bolum2{
+    margin-top: 100px;
+    background-image: url(görseller/hakkimizda.jpg);
+    width: 100%;  
+}
+
+.bolum2 p{
+    color: black;
+    font-size: 18px;
+}
+
+.bolum2 h1{
+    margin-bottom: 30px;
+}
+
+.tanitim{
+    
+    margin-top: 100px;
+    margin-bottom: 120px;
+}
+
+
+p i {
+    
+    font-weight: 700;
+    font-size: 20px;
+    margin-right: 15px;
+    opacity: 0.8;
+}
+.onem2 p i{
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+.tanitim p {
+    font-weight: 450;
+    font-size: 18px;
+    color: black;
+}
+
+
+.onem1 {
+   background-color: rgba(216, 213, 213, 0.65);
+   padding-top: 30px;
+   padding-bottom: 30px;
+   box-shadow: 4px 4px 20px 4px rgba(0,0,0,0.4);/*gölge vermek istiyorum*/
+}
+.onem2 { 
+    margin: 80px 0 80px 0 ;
+    padding-left: 120px;
+    padding-right: 120px;
+}
+
+h1{
+    text-align: center;
+    font-weight: 500;
+    font-size: 45px;
+    color: black;
+    
+}
+
+
+
+@media only screen and (max-width:655px){
+    .onem2{
+        margin: 0;
+        padding: 0;
+    }
+}
+
+/*bolum3*/
+.media{
+    margin-top: 100px;
+}
+.media img{
+    width: 300px;
+    height: 250px;
+    border-radius: 5%;
+    
+}
+
+
+.media h5{
+    font-size: 22px;
+    color: black;
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+
+.media p{
+    font-size: 18px;
+    color:  black;
+    margin-left: 30px;
+}
+
+/*bolum4*/
+.bolum4{
+    margin-top: 100px;
+}
+
+.bolum4 h3{
+    color: black;
+    font-size: 35px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.bolum4, .bolum6 p{
+    color: black;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.bolum4 h5{
+    font-size: 23px;
+    color: black;
+    
+}
+/*bolum5*/
+.media2 img{
+
+    width: 400px;
+    height: 300px;
+    margin-left: 200px;
+}
+
+
+@media only screen and (max-width:995px){
+    
+
+    .bolum5 p{
+        font-size: 16px;
+        color:  black;
+        margin-left: 10px;
+    }
+
+    .bolum5 h5{
+        font-size: 20px;
+        color: black;
+        margin-left: 10px;
+        margin-bottom: 20px; 
+    }
+
+    .bolum5 img{
+        width:200px;
+        height: 200px;
+        margin-left:30px;
+
+    }
+}
+
+
+@media only screen and (max-width:655px){
+    
+    .media p{
+        font-size: 16px;
+        color:  black;
+        margin-left: 10px;
+    }
+
+    .media h5{
+        font-size: 20px;
+        color: black;
+        margin-left: 10px;
+        margin-bottom: 20px; 
+    }
+
+    .media img{
+        width:50px;
+        height: 50px;
+        margin-left: 0;
+
+    }
+}
+
+/*350px in altına düştüğünde görseller cok kücük gorunsun*/
+
+@media only screen and (max-width:350px){
+    
+    .bolum2 h1{
+        font-size: 25px;
+    }
+
+    .bolum2 p{
+        font-size: 16px;
+    }
+    .media2 p{
+        font-size: 16px;
+        color:  black;
+        margin-left: 10px;
+    }
+
+    .media2 h5{
+        font-size: 20px;
+        color: black;
+        margin-left: 10px;
+        margin-bottom: 20px; 
+    }
+
+    .media2 img{
+        width:50px;
+        height: 50px;
+        margin-left: 0;
+
+    }
+}
+
+
+/*bolum6*/
+.bolum6{
+    margin-top: 100px;
+}
+.bolum6 h5{
+    color: black;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+/*footer*/
+footer{
+    background-color: rgba(23, 29, 56, 0.9);
+    margin: 100px 0 0 0 ;
+}
+
+.baslik{
+    font-weight: 500;
+    font-size: 25px;
+    color: white;
+}
+
+footer .one i{
+    font-size: 30px;
+    color: rgb(92, 88, 230);
+    margin-right: 20px;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+footer .one p{  
+    font-size: 18px;
+    color: white;
+
+}
+
+footer .two{
+    padding: 50px;
+    padding-top: 80px;
+}
+footer ul li i{
+    font-size: 30px;
+    color: rgb(147, 181, 255);
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+footer ul li a{
+    font-size: 18px;
+    color: white;
+    
+}

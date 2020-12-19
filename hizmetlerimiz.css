@@ -1,0 +1,191 @@
+body{
+    background: url(Görseller/bg.jpg) no-repeat fixed top;
+    background-position: fixed;
+    width: 100%;
+	height:100vh; /*windows hightı kaplasın diyorsun*/
+	margin:0 auto;
+	background-size:cover;/*ekranda boşluk kalmasın tarayıcının tamamını kaplasın*/
+}
+
+
+.navbar{
+    margin: 0;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+/*menunun uzerine gelindiginde alt cizgi belli olsun*/
+.nav-link::after{
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width 0.3s;
+}
+li{
+    display: inline-block;
+}
+.nav-link:hover::after{
+    width: 100%;
+    transition: width 0.3s;
+}
+
+/*yazi tipi ve fontu bicimlendirme*/
+.birinci ul li{
+    margin-left: 15px;
+
+}
+
+.birinci ul li a{
+    font-weight: 500;
+    font-size: 16px;
+    color: rgb(255, 255, 255) !important;
+    transition: 0.5s;
+    line-height: 45px;/*mobilde alt alta gelmemeleri icin*/
+}
+.birinci ul li a:hover{
+    color: white !important;
+}
+
+/*img bicimlendirme*/
+.birinci .navbar-brand img{
+    width: 350px;
+    height: 87.5px;
+}
+
+
+/*kucuk ekranlarda logo buyuk kaldi onun da kuculmesi icin*/
+@media screen and (max-width:800px){
+    .birinci .navbar-brand img{
+         width: 200px;
+         height: 50px;
+     }
+ 
+     .banner{
+         height: 70vh;
+     }
+ }
+
+.navbar-nav .navbar-item{
+    margin-top: 0;
+    padding-top: 0;
+}
+
+/*tum card lari burada bicimlendirdik*/
+.bolum1 .card{
+    width: 100%;
+    border: 1px solid;
+    padding-bottom:20px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    margin-bottom: 60px;
+
+}
+
+.bolum1 .card:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.6);
+    transform:scale(1.05);
+}
+
+.bolum1 .card img{
+    width: 100%;
+    height: auto;
+}
+
+.bolum1 .card-body{
+    text-align: center;
+}
+
+.bolum1 h5{
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.bolum1 .metin{
+    font-size: 450;
+}
+
+/*sagda ve solda guzel bir gorunum alsin*/
+.yazilim{
+    margin-left: 200px;
+    margin-top: 150px;
+}
+
+.logo{
+    margin-right: 200px;
+    margin-top: -80px;
+}
+
+.photoshop{
+    margin-top: -80px;
+    margin-left:200px;
+}
+
+.wordpress{
+    margin-top: -80px;
+    margin-right:200px;
+}
+
+/*ekran kuculdugunde sagda ve solda olmak yerine alt alta olsun*/
+@media only screen and (max-width:992px){
+
+    .yazilim, .logo, .photoshop,.wordpress{
+        margin: 0;
+        margin: 0,20px,0,20px;
+        padding: 0;
+    }
+    .yazilim{
+        margin-top: 150px;
+    }
+
+    .bolum1 .card:hover{
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.6);
+        transform:none;
+    }
+}
+
+
+/*footer*/
+footer{
+    background-color: rgba(23, 29, 56, 0.9);
+    margin: 100px 0 0 0 ;
+}
+
+.baslik{
+    font-weight: 500;
+    font-size: 25px;
+    color: white;
+}
+
+footer .one i{
+    font-size: 30px;
+    color: rgb(92, 88, 230);
+    margin-right: 20px;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+footer .one p{  
+    font-size: 18px;
+    color: white;
+
+}
+
+footer .two{
+    padding: 50px;
+    padding-top: 80px;
+}
+footer ul li i{
+    font-size: 30px;
+    color: rgb(147, 181, 255);
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+footer ul li a{
+    font-size: 18px;
+    color: white;
+    
+}

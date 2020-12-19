@@ -1,0 +1,306 @@
+body{
+    margin: 0;
+    padding: 0;
+    
+}
+
+html{
+    font-family: sans-serif;
+}
+
+.banner{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    z-index: -100;/*baslik ve slogan öne gecsin*/
+}
+.banner video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    /*videonun tablet ve telefonlarda da ortalanması icin*/
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.navbar{
+    margin: 0;
+    padding: 0;
+}
+
+
+/*menunun uzerine gelindiginde alt cizgi belli olsun*/
+.nav-link::after{
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width 0.3s;
+}
+li{
+    display: inline-block;
+}
+.nav-link:hover::after{
+    width: 100%;
+    transition: width 0.3s;
+}
+
+/*yazi tipi ve fontu bicimlendirme*/
+.birinci ul li{
+    margin-left: 15px;
+
+}
+
+.birinci ul li a{
+    font-weight: 500;
+    font-size: 16px;
+    color: rgb(255, 255, 255) !important;
+    transition: 0.5s;
+    line-height: 45px;/*mobilde alt alta gelmemeleri icin*/
+}
+.birinci ul li a:hover{
+    color: white !important;
+}
+
+/*img bicimlendirme*/
+.birinci .navbar-brand img{
+    width: 350px;
+    height: 87.5px;
+}
+
+.navbar-nav .navbar-item{
+    margin-top: 0;
+    padding-top: 0;
+}
+
+/*tablet ve telefonlarda navbar rengi koyulassin*/
+@media only screen and (max-width:800px){
+    .navbar{
+       position: fixed;
+        top:0;
+        left: 0;
+    }
+    .navbar {
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+}
+
+/*kucuk ekranlarda logo buyuk kaldi onun da kuculmesi icin*/
+@media screen and (max-width:800px){
+   .birinci .navbar-brand img{
+        width: 200px;
+        height: 50px;
+    }
+
+    .banner{
+        height: 70vh;
+    }
+}
+
+
+/*karartma filtresi*/
+.banner .filtre{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.65);
+    top: 0;
+    left: 0;
+}
+
+/*baslik ve slogan bicimlendirme*/
+.banner .yazi{
+    position: absolute;
+    z-index: 100;
+    /*baslik ve slogani ortala*/
+    top: 50%;
+    left: 50%;
+    transform : translateX(-50%) translateY(-50%);
+    /*---*/
+    text-align: center;
+}
+
+.banner .yazi h1{
+    font-size: 60px;
+    color:white;
+    font-weight: 500;
+}
+
+
+@media only screen and (max-width:550px){
+    .banner .yazi h1{
+        font-size: 40px;
+        color:white;
+        font-weight: 500;
+    }
+
+
+}
+
+.banner .yazi p{
+
+    font-size: 22px;
+    color: white;
+}
+
+
+/*ikinci bolum*/
+
+.tanitim{
+    margin-top: 100px;
+    margin-bottom: 120px;
+}
+
+.tanitim h1{
+
+    font-weight: 500;
+    font-size: 28px;
+    color: black;
+}
+.tanitim p i {
+    font-size: 25px;
+    margin-right: 15px;
+}
+.onem2 p i{
+    font-size: 25px;
+    margin-right: 15px;
+}
+
+.tanitim p {
+    font-weight: 450;
+    font-size: 18px;
+    color: black;
+}
+
+
+.onem1 {
+   background-color: rgba(216, 213, 213, 0.65);
+   padding-top: 30px;
+   padding-bottom: 30px;
+   box-shadow: 4px 4px 20px 4px rgba(0,0,0,0.4);/*gölge vermek istiyorum*/
+}
+.onem2 { 
+    margin: 80px 0 80px 0 ;
+    padding-left: 120px;
+    padding-right: 120px;
+}
+
+.onem2 h1{
+    font-weight: 500;
+    font-size: 28px;
+    color: black;
+}
+
+.onem2 p {
+
+    font-weight: 450;
+    font-size: 18px;
+    color: black;
+    margin-top: 20px;
+}
+
+
+@media only screen and (max-width:655px){
+    .onem2{
+        margin: 0;
+        padding: 0;
+    }
+}
+
+/*bolum 3*/
+
+.bolum3 {
+    margin-left: 20px;
+    margin-top: 120px;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.bolum3 h2{
+    font-size: 28px;
+    color: black;
+    font-weight: 500;
+}
+
+.bolum3 .card{
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+@media only screen and (max-width:992px){
+    .bolum3 div{
+        width: 100%;
+    }
+}
+
+.bolum3 i{
+    font-size: 30px;
+    color: brown;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+/*footer bolumu*/
+
+footer{
+    background-color: rgba(23, 29, 56, 0.9);
+}
+
+.baslik{
+    font-weight: 500;
+    font-size: 25px;
+    color: white;
+}
+
+footer .one i{
+    font-size: 30px;
+    color: rgb(92, 88, 230);
+    margin-right: 20px;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+footer .one p{
+    
+    font-size: 18px;
+    color: white;
+
+}
+
+footer .two{
+    padding: 50px;
+    padding-top: 80px;
+}
+footer ul li i{
+    font-size: 30px;
+    color: rgb(147, 181, 255);
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+footer ul li a{
+    font-size: 18px;
+    color: white;
+    
+}
+
+/*burası sayfa kaydırıldığına menunun renginin degismesi icin*/
+
+header .bolum1 nav{
+    transition: 0.5s;
+}
+.active{
+    
+    transition: 0.5s;
+    z-index: 99;
+    background-color:  rgba(0, 0, 0, 0.9);
+    
+}
